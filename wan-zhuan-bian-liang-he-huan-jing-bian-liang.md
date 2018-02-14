@@ -55,7 +55,9 @@ $ echo $PATH
 /usr/local/jdk-9.0.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
 ```
 
-PATH 通常定义在/etc/environment或/etc/profile或~/.bashrc中。如果需要在 PATH 中添加一条新路径，可以使用：
+PATH 通常定义在/etc/environment或/etc/profile或~/.bashrc中。
+
+如果需要在 PATH 中添加一条新路径，可以使用：
 
 ```
 $ export PATH="$PATH:/home/user/bin"
