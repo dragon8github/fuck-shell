@@ -44,18 +44,15 @@ echo "We have $count ${fruit}"
 
 输出如下：We have 5 apple
 
-
-
 ### 用 export 命令来设置环境变量
 
-在默认情况下，有很多标准环境变量可供shell继承使用。
+在默认情况下，有很多标准环境变量可供shell继承使用。
 
 PATH 就是其中之一。通常，变量 PATH 包含：
 
 ```
 $ echo $PATH
 /usr/local/jdk-9.0.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
-
 ```
 
 
