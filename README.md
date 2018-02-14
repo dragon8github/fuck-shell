@@ -17,5 +17,18 @@ $ /home/path/script.sh # 使用脚本的完整路径
 $ /bin/bash script.sh
 ```
 
+每个独立的命令使用分号隔开
+
+```
+$ cmd1 ; cmd2
+```
+
+等同于
+
+```
+$ cmd1
+$ cmd2
+```
+
 
 
