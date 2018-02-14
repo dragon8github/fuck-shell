@@ -21,17 +21,7 @@ printf "%-5s %-10s %-4.2f\n" 3 Jeff 77.564
 
 我们会得到如下格式化的输出：
 
-No    Name       Mark
-
-1     Sarath     80.35
-
-2     James      91.00
-
-3     Jeff       77.56
 
 
-
-
-
-
+![](/assets/import.png)
 
