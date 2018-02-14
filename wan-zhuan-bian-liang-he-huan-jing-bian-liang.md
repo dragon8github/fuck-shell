@@ -90,5 +90,17 @@ echo ${#var}
 20
 ```
 
+### 识别当前所使用的shell
+
+```
+$ echo $SHELL
+/bin/bash
+
+$ echo $0
+/bin/bash
+```
+
+
+
 
 
