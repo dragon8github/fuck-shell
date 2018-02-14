@@ -149,7 +149,8 @@ $ ls -a
 调用函数
 
 ```
-prepend PATH /opt/myapp/bin
+$ mkdir -p /opt/myapp/bin
+$ prepend PATH /opt/myapp/bin
 ```
 
 
