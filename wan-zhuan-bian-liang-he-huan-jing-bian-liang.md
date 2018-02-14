@@ -24,3 +24,27 @@ $ cat /proc/12501/environ | tr '\0' '\n'
 
 ![](/assets/import.pngasasasd)
 
+
+
+### 变量的赋值
+
+```
+$ test="hello world"
+$ echo $test
+hello world
+```
+
+Example：我们可以在 printf 或 echo 命令的双引号中引用变量值。
+
+```
+#!/bin/bash
+# 文件名:variables.sh
+fruit=apple
+count=5
+echo "We have $count ${fruit}"
+```
+
+输出如下：We have 5 apple
+
+
+
