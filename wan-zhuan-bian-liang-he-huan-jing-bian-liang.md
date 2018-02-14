@@ -100,6 +100,40 @@ $ echo $0
 /bin/bash
 ```
 
+### 检查是否为超级用户
+
+UID 是一个重要的环境变量，可以用于检查当前脚本是以超级用户还是以普通用户的身份运行的。
+
+```bash
+#!/bin/bash
+#文件名: isroot.sh
+if [ $UID -ne 0 ]; then
+    echo Non root user. Please run as root.
+else
+    echo Root user
+fi
+```
+
+运行结果：Root user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
