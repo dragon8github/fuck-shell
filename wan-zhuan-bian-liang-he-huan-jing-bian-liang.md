@@ -63,5 +63,16 @@ PATH 通常定义在/etc/environment或/etc/profile或~/.bashrc中。
 $ export PATH="$PATH:/home/user/bin"
 ```
 
+也可以使用
+
+```
+$ PATH="$PATH:/home/user/bin"
+$ export PATH
+
+$ echo $PATH
+/home/slynux/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr
+/games:/home/user/bin
+```
+
 
 
