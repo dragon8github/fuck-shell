@@ -131,7 +131,7 @@ fi
 prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; }
 ```
 
-.bashrc 文件位于 ~/ 之中，也就是家目录，如果你使用root登陆，那么就是在/root中。我们可以通过ls -a看到.bashrc隐藏文件
+.bashrc 文件位于 ~/ 之中，也就是所谓家目录，如果你使用root登陆，那么就是在/root中。我们可以通过ls -a看到.bashrc隐藏文件
 
 ```
 $ cd ~
@@ -139,4 +139,8 @@ $ ls -a
 ```
 
 ![](/assets/imporadjiasdjiasijdast.png)
+
+调用函数
+
+
 
