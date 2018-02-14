@@ -74,5 +74,21 @@ $ echo $PATH
 /games:/home/user/bin
 ```
 
+这样，我们就将/home/user/bin添加到了 PATH 中。
+
+### 获得字符串长度
+
+```
+$ length=${#var}
+```
+
+Example
+
+```
+$ var=12345678901234567890
+echo ${#var}
+20
+```
+
 
 
