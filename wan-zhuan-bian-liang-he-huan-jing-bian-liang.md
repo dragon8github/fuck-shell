@@ -48,25 +48,25 @@ echo "We have $count ${fruit}"
 
 在默认情况下，有很多标准环境变量可供shell继承使用。
 
-PATH 就是其中之一。通常，变量 PATH 包含：
+PATH 就是其中之一
 
 ```
 $ echo $PATH
 /usr/local/jdk-9.0.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
 ```
 
-**PATH 通常定义在/etc/environment 或 /etc/profile 或 ~/.bashrc中。**
+**PATH 通常定义在 /etc/environment 或 /etc/profile 或 ~/.bashrc中。**
 
 如果需要在 PATH 中添加一条新路径，可以使用：
 
 ```
-$ export PATH="$PATH:/home/user/bin"
+$ export PATH=$PATH:/home/user/bin
 ```
 
 也可以使用
 
 ```
-$ PATH="$PATH:/home/user/bin"
+$ PATH=$PATH:/home/user/bin
 $ export PATH
 
 $ echo $PATH
@@ -141,6 +141,4 @@ $ ls -a
 ![](/assets/imporadjiasdjiasijdast.png)
 
 调用函数
-
-
 
