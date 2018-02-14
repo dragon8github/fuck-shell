@@ -131,6 +131,12 @@ fi
 prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; }
 ```
 
+然后使用以下命令刷新.bashrc文件，使之生效
+
+```
+$ source .bashrc
+```
+
 .bashrc 文件位于 ~/ 之中，也就是所谓家目录，如果你使用root登陆，那么就是在/root中。我们可以通过ls -a看到.bashrc隐藏文件
 
 ```
@@ -139,6 +145,12 @@ $ ls -a
 ```
 
 ![](/assets/imporadjiasdjiasijdast.png)
+
+调用函数
+
+```
+prepend PATH /opt/myapp/bin
+```
 
 
 
