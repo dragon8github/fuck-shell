@@ -1,3 +1,21 @@
-# My Awesome Book
+设置脚本可执行权限
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+```
+$ chmod a+x script.sh
+```
+
+运行脚本
+
+```
+$ ./script.sh #./ 表示当前目录
+$ /home/path/script.sh # 使用脚本的完整路径
+```
+
+手动指定bash方式启动脚本
+
+```
+$ /bin/bash script.sh
+```
+
+
+
