@@ -125,7 +125,7 @@ fi
 
 ### 使用函数添加环境变量
 
-我们希望用以下这种方式将 `/opt/myapp/bin` 加入环境变量：
+假设我们希望用以下这种方式将 `/opt/myapp/bin` 加入环境变量：
 
 ```
 $ PATH=/opt/myapp/bin:$PATH
