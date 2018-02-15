@@ -151,6 +151,9 @@ $ ls -a
 ```
 $ mkdir -p /opt/myapp/bin
 $ prepend PATH /opt/myapp/bin
+$ echo $PATH
+/opt/myapp/bin:/usr/local/jdk-9.0.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+
 ```
 
 
