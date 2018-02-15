@@ -125,7 +125,14 @@ fi
 
 ### 使用函数添加环境变量
 
-把下面的函数加入 ~/.bashrc ，让一切变得更轻松些：
+我们希望用以下这种方式将 `/opt/myapp/bin` 加入环境变量：
+
+```
+$ PATH=/opt/myapp/bin:$PATH
+$ export PATH
+```
+
+我们可以使用函数的方式来让一切变得轻松些，把下面的函数加入 ~/.bashrc ：
 
 ```
 prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; }
@@ -153,8 +160,12 @@ $ mkdir -p /opt/myapp/bin
 $ prepend PATH /opt/myapp/bin
 $ echo $PATH
 /opt/myapp/bin:/usr/local/jdk-9.0.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
-
 ```
+
+### 工作原理
+
+* \[ -d "$2" \]：它首先检查该函数第二个参数所指定的目录是否存在。
+* eval ： 它的作用是把变量 / 参数变成命令执行。
 
 
 
