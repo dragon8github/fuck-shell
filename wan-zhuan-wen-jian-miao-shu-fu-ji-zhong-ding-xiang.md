@@ -51,5 +51,23 @@ $ echo $?
     $ cat stderr.txt # 日志正常记录
     -bash: 123: command not found
 
+4、你可以将 stderr 单独重定向到一个文件，将 stdout 重定向到另一个文件：
+
+```
+$ fuckyou 2>stderr.txt 1>stdout.txt  # 系统没有fuckyou这个命令
+
+$ cat stderr.txt
+-bash: fuckyou: command not found
+```
+
+5、还可以利用下面这个更好的方法将 stderr 转换成 stdout ，使得 stderr 和 stdout 都被重定向到同一个文件中：
+
+```
+$ fuckyou &> stdin.txt
+
+$ cat stderr.txt
+-bash: fuckyou: command not found
+```
+
 
 
