@@ -66,9 +66,10 @@ world
 还可以 利用内嵌“索引 - 值”列表的方法，提供一个“索引 - 值”列表：
 
 ```
-$ ass_array=(['apple']=100, ['watermelon']=200)
+$ declare -A fruits_value
+$ fruits_value=(['apple']=100, ['watermelon']=200)
 
-$ echo ${ass_array[@]}
+$ echo ${fruits_value[@]}
 100, 200
 ```
 
