@@ -60,13 +60,20 @@ $ cat stderr.txt
 -bash: fuckyou: command not found
 ```
 
-5、还可以利用下面这个更好的方法将 stderr 转换成 stdout ，使得 stderr 和 stdout 都被重定向到同一个文件中：
+5、还可以利用下面这个更好的方法将 stderr 转换成 stdout ，使得 stderr 和 stdout  
+ 都被重定向到同一个文件中：
 
 ```
 $ fuckyou &> stdin.txt
 
 $ cat stderr.txt
 -bash: fuckyou: command not found
+```
+
+6、如果你仅仅想要屏蔽错误，不想产生输出文件，那么你可以重定向到/dev/null中，此处被称为Unix中的黑洞
+
+```
+$ fuckyou &> /dev/null
 ```
 
 
