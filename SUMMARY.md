@@ -5,6 +5,7 @@
 * [脚本执行 与 设置权限](README.md)
 * [echo 与 Printf 打印命令](echo-yu-printf-da-yin-ming-ling.md)
 * [玩转变量和环境变量](wan-zhuan-bian-liang-he-huan-jing-bian-liang.md)
+* [使用 let / \[\] / \(\(\)\) / expr / bc 进行数学运算](shi-yong-let-expr-bc-jin-xing-shu-xue-yun-suan.md)
 
 ## 第一章
 
