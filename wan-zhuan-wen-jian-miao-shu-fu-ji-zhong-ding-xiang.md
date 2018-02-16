@@ -29,11 +29,27 @@ $ cat ./out.txt
 ls: cannot access +: No such file or directory
 ```
 
-当命令成功完成后，退出状态可以从特殊变量 $?中获得 （在命令执行之后立刻运行 echo $? ， 就可以打印出退出状态） 
+当命令成功完成后，退出状态可以从特殊变量 $?中获得 （在命令执行之后立刻运行 echo $? ， 就可以打印出退出状态）
 
 ```
 $ echo $?
 ```
+
+坑爹： 请注意 \`\` 代码块中报错的情况，来看看下面的例子：
+
+    $ echo `123`
+    -bash: 123: command not found
+
+    $ echo `123` 2>stderr.txt # 无法阻止报错
+    -bash: 123: command not found
+    $ cat stderr.txt # 日志为空
+
+原因是 \`\` 为一个单独的执行块，所以外部无法捕捉。需要单独在 ·· 中捕捉：
+
+    $ echo `123 2>stderr.txt` # 没有报错，由于``代码块中报错，返回值为空，所以外部输出一段空字符串
+
+    $ cat stderr.txt # 日志正常记录
+    -bash: 123: command not found
 
 
 
