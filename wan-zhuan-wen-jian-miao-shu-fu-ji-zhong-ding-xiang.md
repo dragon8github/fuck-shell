@@ -2,7 +2,7 @@
 
 通过内容过滤将输出重定向到文件是我们平日里的基本任务之一。
 
-*  0 —— stdin （标准输入）
+* 0 ——  stdin （标准输入）
 * 1 ——  stdout （标准输出）
 * 2 ——  stderr （标准错误）
 
@@ -18,7 +18,7 @@ $ echo "This is a sample text 1" > temp.txt
 $ echo "This is a sample text 2" >> temp.txt
 ```
 
-3、来看看什么是标准错误以及如何对它重定向
+3、来看看什么是 stderr \(标准错误\) 以及如何对它重定向：
 
 ```
 $ ls +
@@ -27,8 +27,12 @@ ls: cannot access +: No such file or directory
 $ ls + 2> out.txt # 正常运行
 $ cat ./out.txt
 ls: cannot access +: No such file or directory
+```
 
+当命令成功完成后，退出状态可以从特殊变量 $?中获得 （在命令执行之后立刻运行 echo $? ， 就可以打印出退出状态） 
 
+```
+$ echo $?
 ```
 
 
