@@ -128,16 +128,15 @@ fi
 假设我们希望用以下这种方式将 `/opt/myapp/bin` 加入环境变量：
 
 ```
-$ PATH=/opt/myapp/bin:$PATH
-$ export PATH
+$ PATH=/opt/myapp/bin:$PATH && export PATH
 ```
 
 我们可以使用函数的方式来让一切变得轻松些，把下面的函数加入 ~/.bashrc ：
 
-```
-prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; }
-prepend2() { [ -d "$2" ] && eval $1=$2:\$$1 && export $1; }
-prepend3() { [ -d "$2" ] && eval PATH=$2:\$$1; }
+```bash
+prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; } 
+prepend2() { [ -d "$2" ] && eval $1=$2:\$$1 && export $1; } # 没有引号也是可以的。使用引号应该是为了避免某些特殊符号
+prepend3() { [ -d "$2" ] && eval PATH=$2:\$$1; } # export PATH=$PATH:/opt/myapp/bin
 ```
 
 然后使用以下命令刷新.bashrc文件，使之生效
