@@ -73,5 +73,15 @@ $ echo ${fruits_value[@]}
 100, 200
 ```
 
+4、列出索引数组的所有索引：
+
+```
+$ echo ${!fruits_value[@]}
+apple watermelon
+
+$ echo ${!fruits_value[*]}
+apple watermelon
+```
+
 
 
