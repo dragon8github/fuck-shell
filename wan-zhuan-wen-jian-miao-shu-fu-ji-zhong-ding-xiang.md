@@ -63,7 +63,7 @@ $ cat stderr.txt
 5、还可以利用下面这个更好的方法将 stderr 转换成 stdout ，使得 stderr 和 stdout  
  都被重定向到同一个文件中：
 
-```
+```py
 $ fuckyou &> stdin.txt
 
 $ cat stderr.txt
@@ -76,5 +76,16 @@ $ cat stderr.txt
 $ fuckyou &> /dev/null
 ```
 
+7、如果对 stderr 或 stdout 进行重定向，被重定向的文本会传入文件。因为文本已经被重定向到文件中， 也就没剩下什么东西可以通过管道 （ \| ） 传给接下来的命令。
 
+```py
+$ echo 123 1>stdin.txt | cat -n # 管道返回为空，所以cat命令不执行。
+$ cat std
+```
+
+但是有一个方法既可以将数据重定向到文件，还可以提供一份重定向数据的副本作为后续命令的 stdin 。这可以使用 tee 来实现。
+
+```
+
+```
 
