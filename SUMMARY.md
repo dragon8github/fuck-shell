@@ -7,6 +7,7 @@
 * [玩转变量和环境变量](wan-zhuan-bian-liang-he-huan-jing-bian-liang.md)
 * [使用 let / \[\] / \(\(\)\) / expr / bc 进行数学运算](shi-yong-let-expr-bc-jin-xing-shu-xue-yun-suan.md)
 * [玩转文件描述符及重定向](wan-zhuan-wen-jian-miao-shu-fu-ji-zhong-ding-xiang.md)
+* [数组和关联数组](shu-zu-he-guan-lian-shu-zu.md)
 
 ## 第一章
 
