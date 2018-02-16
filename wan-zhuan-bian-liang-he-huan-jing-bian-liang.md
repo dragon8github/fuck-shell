@@ -136,7 +136,7 @@ $ PATH=/opt/myapp/bin:$PATH && export PATH
 ```bash
 prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; } 
 prepend2() { [ -d "$2" ] && eval $1=$2:\$$1 && export $1; } # 没有引号也是可以的。使用引号应该是为了避免某些特殊符号
-prepend3() { [ -d "$2" ] && eval PATH=$2:\$$1; } # export PATH=$PATH:/opt/myapp/bin
+prepend3() { [ -d "$2" ] && eval PATH=$2:\$$1; } # 等同于export PATH=$PATH:/opt/myapp/bin
 ```
 
 然后使用以下命令刷新.bashrc文件，使之生效
