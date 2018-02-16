@@ -136,6 +136,8 @@ $ export PATH
 
 ```
 prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; }
+prepend2() { [ -d "$2" ] && eval $1=$2:\$$1 && export $1; }
+prepend3() { [ -d "$2" ] && eval PATH=$2:\$$1; }
 ```
 
 然后使用以下命令刷新.bashrc文件，使之生效
