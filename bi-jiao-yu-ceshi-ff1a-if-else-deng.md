@@ -90,5 +90,5 @@ then
 fi
 ```
 
-输出如下：**str1 is nonempty and str2 is empty string.**
+输出如下：**str1 is nonempty and str2 is empty string.**
 
