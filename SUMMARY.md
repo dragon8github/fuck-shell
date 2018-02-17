@@ -15,6 +15,7 @@
 * [read 命令](read-ming-ling.md)
 * [运行命令直至执行成功](yun-xing-ming-ling-zhi-zhi-zhi-xing-cheng-gong.md)
 * [字段分隔符和迭代器：for 循环、while 循环、until 循环](zi-duan-fen-ge-fu-he-die-dai-qi.md)
+* [比较与测试：if、else等](bi-jiao-yu-ceshi-ff1a-if-else-deng.md)
 
 ## 第一章
 
