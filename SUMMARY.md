@@ -9,6 +9,8 @@
 * [玩转文件描述符及重定向](wan-zhuan-wen-jian-miao-shu-fu-ji-zhong-ding-xiang.md)
 * [数组和关联数组](shu-zu-he-guan-lian-shu-zu.md)
 * [获取、设置日期和延时](huo-qu-3001-she-zhi-ri-qi-he-yan-shi.md)
+* [调试 Shell 脚本](diao-shi-jiao-ben.md)
+* [函数和参数](han-shu-he-can-shu.md)
 
 ## 第一章
 
