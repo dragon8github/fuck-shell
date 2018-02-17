@@ -13,6 +13,7 @@
 * [函数和参数](han-shu-he-can-shu.md)
 * [管道（pipe）](guan-dao-ff08-pipe.md)
 * [read 命令](read-ming-ling.md)
+* [运行命令直至执行成功](yun-xing-ming-ling-zhi-zhi-zhi-xing-cheng-gong.md)
 
 ## 第一章
 
