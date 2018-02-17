@@ -37,7 +37,7 @@ $ date "+%Y-%m-%d %H:%M:%S"
 
 有时候，我们需要检查一组命令所花费的时间，可以使用以下代码：
 
-```bash
+```py
 #!/bin/bash
 #文件名: time_take.sh
 start=$(date +%s)
@@ -49,5 +49,5 @@ difference=$(( end - start))
 echo Time taken to execute commands is $difference seconds.
 ```
 
-
+![](/assets/import223123123.png)
 
