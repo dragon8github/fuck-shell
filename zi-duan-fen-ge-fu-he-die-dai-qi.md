@@ -30,3 +30,35 @@ IFS的默认值为空白字符（换行符、制表符或者空格） 。
 
 如果没有把IFS设置成逗号，那么上面的脚本会将全部数据作为单个字符串打印出来
 
+---
+
+for 循环
+
+```py
+for var in list;
+do
+    commands; #使用变量$var
+done
+```
+
+ while 循环
+
+```py
+while condition
+do
+    commands;
+done
+```
+
+ until 循环
+
+```py
+x=0;
+until [ $x -eq 9 ]; #条件是[$x -eq 9 ]
+do
+    let x++; echo $x;
+done
+```
+
+
+

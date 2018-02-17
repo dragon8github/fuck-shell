@@ -14,7 +14,7 @@
 * [管道（pipe）](guan-dao-ff08-pipe.md)
 * [read 命令](read-ming-ling.md)
 * [运行命令直至执行成功](yun-xing-ming-ling-zhi-zhi-zhi-xing-cheng-gong.md)
-* [字段分隔符和迭代器](zi-duan-fen-ge-fu-he-die-dai-qi.md)
+* [字段分隔符和迭代器：for 循环、while 循环、until 循环](zi-duan-fen-ge-fu-he-die-dai-qi.md)
 
 ## 第一章
 
