@@ -11,6 +11,7 @@
 * [获取、设置日期和延时](huo-qu-3001-she-zhi-ri-qi-he-yan-shi.md)
 * [调试 Shell 脚本](diao-shi-jiao-ben.md)
 * [函数和参数](han-shu-he-can-shu.md)
+* [管道（pipe）](guan-dao-ff08-pipe.md)
 
 ## 第一章
 
