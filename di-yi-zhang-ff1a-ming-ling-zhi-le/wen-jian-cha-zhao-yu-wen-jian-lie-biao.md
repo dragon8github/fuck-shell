@@ -239,7 +239,17 @@ find /home -type f -user root
 $ find /home/myshell -iname "*.sh" -exec chmod a+x {} \;
 ```
 
- {} 是一个与  -exec 选项搭配使用的特殊字符串。对于每一个匹配的文件，{} 会被替换成相应的文件名
+{} 是一个与  -exec 选项搭配使用的特殊字符串。对于每一个匹配的文件，{} 会被替换成相应的文件名。
+
+另一个例子是将给定目录中的所有sh脚本拼接起来写入单个文件all\_sh\_files.txt。
+
+```
+$ find /home/myshell/ -iname "*.sh" -exec cat {} \;>all_sh_file.txt
+```
+
+```
+
+```
 
 
 
