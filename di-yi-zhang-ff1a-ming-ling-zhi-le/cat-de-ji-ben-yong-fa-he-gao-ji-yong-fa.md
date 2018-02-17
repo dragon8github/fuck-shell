@@ -1,6 +1,6 @@
 cat 是命令行玩家首先必须学习的命令之一。
 
-####  1.打印单个文件的内容：
+#### 1.打印单个文件的内容：
 
 ```
 $ cat file.txt
@@ -22,9 +22,8 @@ This is line from two.txt
 
 #### 3.摆脱多余的空白行
 
-有时候文本文件中可能包含多处连续的空白行。如果你需要删除这些额外的空白行，使用下面的方法：
-
-
+有时候文本文件中可能包含多处连续的空白行。如果你需要删除这些额外的空白行，使用下  
+面的方法：
 
 #### 4.将制表符显示为 ^\|
 
@@ -33,15 +32,29 @@ This is line from two.txt
 ```py
 $ cat file.py
 def function():
-	var = 5
-	next = 6
-	third = 7
+    var = 5
+    next = 6
+    third = 7
 
 $ cat -T file.py
 def function():
 ^Ivar = 5
 ^Inext = 6
 ^Ithird = 7
+```
+
+#### 5.行号
+
+```
+$ cat lines.txt
+line
+line
+line
+
+$ cat -n lines.txt
+1 line
+2 line
+3 line
 ```
 
 
