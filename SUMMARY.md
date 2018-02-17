@@ -20,6 +20,7 @@
 ## 第一章：命令之乐
 
 * [cat 的基本用法和高级用法](di-yi-zhang-ff1a-ming-ling-zhi-le/cat-de-ji-ben-yong-fa-he-gao-ji-yong-fa.md)
+* [录制并回放终端会话](di-yi-zhang-ff1a-ming-ling-zhi-le/lu-zhi-bing-hui-fang-zhong-duan-hui-hua.md)
 
 ## 番外章
 
