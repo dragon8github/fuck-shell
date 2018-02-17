@@ -53,14 +53,14 @@ $ find /home \( -name "*.txt" -o -name "*.sh" \)
 
 \(4\)匹配路径
 
- -name 总是用给定的文件名进行匹配。-path 则将文件路径作为一个整体进行匹配。例如：
+-name 总是用给定的文件名进行匹配。  
+-path 则将文件路径作为一个整体进行匹配。例如：
 
 ```
 $ find /home -path "*/myshell"
 
 /home/myshell
-
 ```
 
-
+选项 -regex 的参数和 -path 的类似，只不过 -regex 是基于正则表达式来匹配文件路径的。
 
