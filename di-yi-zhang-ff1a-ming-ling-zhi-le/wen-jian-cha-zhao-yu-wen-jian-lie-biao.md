@@ -51,5 +51,16 @@ $ find /home -name "*.txt" -o -name "*.sh"
 $ find /home \( -name "*.txt" -o -name "*.sh" \)
 ```
 
+\(4\)匹配路径
+
+ -name 总是用给定的文件名进行匹配。-path 则将文件路径作为一个整体进行匹配。例如：
+
+```
+$ find /home -path "*/myshell"
+
+/home/myshell
+
+```
+
 
 
