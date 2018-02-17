@@ -203,5 +203,39 @@ $ find . -type f -perm 644
 #  打印出权限为644 的文件
 ```
 
+以Apache Web服务器为例。Web服务器上的PHP文件需要具有合适的执行权限。我们可以用
+
+下面的方法找出那些没有设置好执行权限的PHP文件：
+
+```
+$ find . -type f -name "*.php" ! -perm 644
+```
+
+\(13\) 根据文件的所有权进行搜索
+
+用选项  -user USER 就能够找出由某个特定用户所拥有  
+的文件。参数 USER 可以是用户名或UID。例如，打印出用户root拥有的所有文件：
+
+```
+find /home -type f -user root
+
+/home/myshell/sleep.sh
+/home/myshell/variables.sh
+/home/myshell/time_take.sh
+/home/myshell/file.txt
+/home/myshell/printf.sh
+/home/myshell/pwd.sh
+/home/myshell/isroot.sh
+/home/myshell/log.sh
+```
+
+\(14\) find + exec 对搜索结果进行操作
+
+-exec 算得上是 find 最强大的特性之一。
+
+
+
+
+
 
 
