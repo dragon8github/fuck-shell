@@ -10,7 +10,9 @@ $ exit
 Script done, file is output.session # 停止你的表演
 ```
 
-两个配置文件被当做 script 命令的参数。其中一个文件（timing.log）用于存储时序信息，描述每一个命令在何时运行；另一个文件（output.session）用于存储命令输出。 -t 选项用于将时序数据导入 stderr 。 2&gt; 则用于将 stderr 重定向到timing.log。
+两个配置文件被当做 script 命令的参数。其中一个文件（timing.log）用于存储时序信息，  
+描述每一个命令在何时运行；另一个文件（output.session）用于存储命令输出。 -t 选项用于将时  
+序数据导入 stderr 。 2&gt; 则用于将 stderr 重定向到timing.log。
 
 利用这两个文件：timing.log（存储时序信息）和output.session（存储命令输出信息） ，我们可以按照下面的方法回放命令执行过程：
 
@@ -18,5 +20,7 @@ Script done, file is output.session # 停止你的表演
 $ scriptreplay timing.log output.session # 按播放命令序列输出
 ```
 
+通常，我们会录制桌面环境视频来作为教程使用。但是视频需要大量的存储空间，而终端脚本文件仅仅是一个文本文件，其文件大小不过是KB级别。
 
+你可以把timing.log和output.session文件分享给任何想在自己的终端上回放这段终端会话的人。
 
