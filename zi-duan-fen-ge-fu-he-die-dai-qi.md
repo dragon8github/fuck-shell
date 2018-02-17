@@ -1,7 +1,6 @@
-CSV数据条目循环
+### 逗号分隔型数值（Comma Separated Value，CSV）数据条目循环
 
 ```
-data="name,sex,rollno,location"
 oldIFS=$IFS
 IFS=,
 
