@@ -33,5 +33,21 @@ $ date "+%Y-%m-%d %H:%M:%S"
 2018-02-17 08:56:08
 ```
 
+### 实战演练
+
+有时候，我们需要检查一组命令所花费的时间，可以使用以下代码：
+
+```bash
+#!/bin/bash
+#文件名: time_take.sh
+start=$(date +%s)
+
+echo "这里写上你要测试的语句"
+
+end=$(date +%s)
+difference=$(( end - start))
+echo Time taken to execute commands is $difference seconds.
+```
+
 
 
