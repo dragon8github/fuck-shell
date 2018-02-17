@@ -12,6 +12,7 @@
 * [调试 Shell 脚本](diao-shi-jiao-ben.md)
 * [函数和参数](han-shu-he-can-shu.md)
 * [管道（pipe）](guan-dao-ff08-pipe.md)
+* [read 命令](read-ming-ling.md)
 
 ## 第一章
 
