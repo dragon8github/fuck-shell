@@ -14,5 +14,14 @@ $ read -s val # 等待用户输入，无显示
 $ echo $var
 ```
 
+\(3\) 显示提示信息：
+
+```
+$ read -p '请输入你的姓名:' val
+请输入你的姓名:Lee
+$ echo $val
+Lee
+```
+
 
 
