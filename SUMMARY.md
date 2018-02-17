@@ -14,6 +14,7 @@
 * [管道（pipe）](guan-dao-ff08-pipe.md)
 * [read 命令](read-ming-ling.md)
 * [运行命令直至执行成功](yun-xing-ming-ling-zhi-zhi-zhi-xing-cheng-gong.md)
+* [无奈跳过的章节](wu-nai-tiao-guo-de-zhang-jie.md)
 
 ## 第一章
 
