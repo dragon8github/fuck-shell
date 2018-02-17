@@ -19,6 +19,8 @@
 
 ## 第一章：命令之乐
 
+* [cat 的基本用法和高级用法](di-yi-zhang-ff1a-ming-ling-zhi-le/cat-de-ji-ben-yong-fa-he-gao-ji-yong-fa.md)
+
 ## 番外章
 
 * [无奈跳过的章节](wu-nai-tiao-guo-de-zhang-jie.md)
