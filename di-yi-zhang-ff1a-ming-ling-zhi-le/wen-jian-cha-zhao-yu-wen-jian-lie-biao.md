@@ -62,5 +62,24 @@ $ find /home -path "*/myshell"
 /home/myshell
 ```
 
-选项 -regex 的参数和 -path 的类似，只不过 -regex 是基于正则表达式来匹配文件路径的。
+选项 -regex 的参数和 -path 的类似，只不过 -regex 是基于正则表达式来匹配文件路径的。
+
+\(5\)使用正则表达式来匹配：
+
+```py
+$ ls
+new.PY next.jpg test.py
+$ find . -regex ".*\(\.py\|\.sh\)$"
+./test.py
+```
+
+类似地， -iregex 可以让正则表达式忽略大小写。例如：
+
+```
+$ find . -iregex ".*\(\.py\|\.sh\)$"
+./test.py
+./new.PY
+```
+
+
 
