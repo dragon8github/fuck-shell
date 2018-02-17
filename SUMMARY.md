@@ -8,6 +8,7 @@
 * [使用 let / \[\] / \(\(\)\) / expr / bc 进行数学运算](shi-yong-let-expr-bc-jin-xing-shu-xue-yun-suan.md)
 * [玩转文件描述符及重定向](wan-zhuan-wen-jian-miao-shu-fu-ji-zhong-ding-xiang.md)
 * [数组和关联数组](shu-zu-he-guan-lian-shu-zu.md)
+* [获取终端信息](huo-qu-zhong-duan-xin-xi.md)
 
 ## 第一章
 
