@@ -233,9 +233,13 @@ find /home -type f -user root
 
 -exec 算得上是 find 最强大的特性之一。
 
+下面的例子中，我们将/home/myshell 下所有的.sh赋予可执行权限
 
+```py
+$ find /home/myshell -iname "*.sh" -exec chmod a+x {} \;
+```
 
-
+ {} 是一个与  -exec 选项搭配使用的特殊字符串。对于每一个匹配的文件，{} 会被替换成相应的文件名
 
 
 
