@@ -57,5 +57,20 @@ $ find /home/myshell/ -name "*.txt" | xargs rm -f
 $ find /home/myshell/ -name "*.txt" -print0 | xargs -0 rm -f
 ```
 
+\(5\) 统计 /home/myshell 目录中sh文件的行数：
+
+```py
+$ find /home/myshell/ -type f -name "*.sh" -print0 | xargs -0 wc -l
+
+ 18 /home/myshell/sleep.sh
+   5 /home/myshell/variables.sh
+   9 /home/myshell/time_take.sh
+  10 /home/myshell/printf.sh
+   7 /home/myshell/pwd.sh
+   7 /home/myshell/isroot.sh
+   6 /home/myshell/log.sh
+  62 total
+```
+
 
 
