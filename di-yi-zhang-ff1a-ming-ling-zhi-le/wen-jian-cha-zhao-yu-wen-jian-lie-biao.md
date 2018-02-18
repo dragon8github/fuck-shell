@@ -247,8 +247,18 @@ $ find /home/myshell -iname "*.sh" -exec chmod a+x {} \;
 $ find /home/myshell/ -iname "*.sh" -exec cat {} \;>all_sh_file.txt
 ```
 
-```
+用下列命令将1天前的 .sh文件复制到OLD目录中：
 
+$ mkdir OLD
+
+$ find /home/myshell/ -mtime +1 -name "\*.sh" -exec cp {} OLD \;
+
+\(15\)排除指定的目录：
+
+\\( -name ".git" -prune \\) 的作用是用于进行排除，它指明了 .git目录应该被排除在外
+
+```
+$ find /home/myshell/ \( -name ".git" -prune \) -o \( -name "*.sh" \)
 ```
 
 
