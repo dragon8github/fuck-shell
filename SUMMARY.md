@@ -23,6 +23,7 @@
 * [录制并回放终端会话](di-yi-zhang-ff1a-ming-ling-zhi-le/lu-zhi-bing-hui-fang-zhong-duan-hui-hua.md)
 * [文件查找与文件列表：find](di-yi-zhang-ff1a-ming-ling-zhi-le/wen-jian-cha-zhao-yu-wen-jian-lie-biao.md)
 * [玩转 xargs](di-yi-zhang-ff1a-ming-ling-zhi-le/wan-zhuan-xargs.md)
+* [用 tr 进行转换](di-yi-zhang-ff1a-ming-ling-zhi-le/yong-tr-jin-xing-zhuan-huan.md)
 
 ## 番外章
 

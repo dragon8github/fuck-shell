@@ -2,7 +2,7 @@ xargs 命令把从 stdin 接收到的数据重新格式化，再将其作为参�
 
 xargs 可以作为一种替代，其作用类似于 find 命令中的  -exec 。下面是各种 xargs 命令的使用技巧。
 
-\(1\) 将多行输入转换成单行输出。
+#### \(1\) 将多行输入转换成单行输出。
 
 只需要将换行符移除，再用 " " （空格）进行代替，就可以实现多行输入的转换。 '\n'被解释成一个换行符，换行符其实就是多行文本之间的定界符。利用 xargs ，我们可以用 空格替换掉换行符，这样就能够将多行文本转换成单行文本：
 
@@ -16,7 +16,7 @@ $ cat example.txt | xargs
 1 2 3 4 5 6 7 8 9 10 11 12
 ```
 
-\(2\)将单行输入转换成多行输出。
+#### \(2\)将单行输入转换成多行输出。
 
 ```
 $ cat example.txt | xargs -n 3
@@ -26,7 +26,7 @@ $ cat example.txt | xargs -n 3
 10 11 12
 ```
 
-\(3\)可以用自己的定界符来分隔参数。用 -d 选项为输入指定一个定制的定界符：
+#### \(3\)可以用自己的定界符来分隔参数。用 -d 选项为输入指定一个定制的定界符：
 
 ```
 $ echo "splitXsplitXsplitXsplit" | xargs -d X
@@ -41,7 +41,7 @@ split split
 split split
 ```
 
-\(4\) 结合 find 使用 xargs
+#### \(4\) 结合 find 使用 xargs
 
 xargs 和 find 算是一对死党。两者结合使用可以让任务变得更轻松。
 
@@ -57,7 +57,7 @@ $ find /home/myshell/ -name "*.txt" | xargs rm -f
 $ find /home/myshell/ -name "*.txt" -print0 | xargs -0 rm -f
 ```
 
-\(5\) 统计 /home/myshell 目录中sh文件的行数：
+#### \(5\) 统计 /home/myshell 目录中 sh 文件的行数：
 
 ```py
 $ find /home/myshell/ -type f -name "*.sh" -print0 | xargs -0 wc -l
