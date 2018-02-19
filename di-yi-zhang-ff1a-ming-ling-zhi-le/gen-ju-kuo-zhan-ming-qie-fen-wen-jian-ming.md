@@ -12,9 +12,14 @@ name=${file_jpg%.*}
 echo File name is: $name
 ```
 
+输出结果：File name is: sample
+
+####  2.下一个任务是将文件名的扩展名部分提取出来，这可以借助 \# 操作符实现。
+
 ```
-输出结果：File name is: sample 
+$ extension=${file_jpg#*.}
+$ echo Extension is: jpg
 ```
 
-
+输出结果： Extension is: jpg
 
