@@ -26,6 +26,7 @@
 * [用 tr 进行转换](di-yi-zhang-ff1a-ming-ling-zhi-le/yong-tr-jin-xing-zhuan-huan.md)
 * [校验和（checksum）与核实](di-yi-zhang-ff1a-ming-ling-zhi-le/xiao-yan-yu-he-shi.md)
 * [加密工具与散列](di-yi-zhang-ff1a-ming-ling-zhi-le/jia-mi-gong-ju-yu-san-lie.md)
+* [排序、唯一与重复](di-yi-zhang-ff1a-ming-ling-zhi-le/pai-xu-3001-wei-yi-yu-zhong-fu.md)
 
 ## 番外章
 
