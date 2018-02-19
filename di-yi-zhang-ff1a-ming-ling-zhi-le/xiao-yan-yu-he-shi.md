@@ -8,8 +8,6 @@
 3. 我们对原始文件和接收到的文件都进行校验和计算。通过比对两者的校验和，就能够核实 接收到的文件是否正确。如果校验和 （一个来自发送地的原始文件， 另一个来自目的地的接收文件） 相等，就意味着我们接收到了正确的文件，否则说明用户接收到的不是正确的文件，可能需要再次获取并校验和。
 4. 校验和对于编写备份脚本或系统维护脚本来说非常重要， 因为它们都会涉及通过网络传输文件。 通过使用校验和核实， 我们就可以识别出那些在网络传输过程中出现损坏的文件， 并进行重发。
 
-
-
 #### 1.为了计算md5sum，使用下列命令格式：
 
 ```py
@@ -19,10 +17,10 @@ $ md5sum filename
 $ md5sum file1 file2 file3 .. 
 [checksum1] file1
 [checksum1] file2
-[checksum1] file3 
+[checksum1] file3
 ```
 
-#### 2.将输出的校验和重定向到一个文件，然后用这个MD5文件核实数据的完整性： 
+#### 2.将输出的校验和重定向到一个文件，然后用这个MD5文件核实数据的完整性：
 
 ```
 $ md5sum filename > file_sum.md5
@@ -34,10 +32,28 @@ $ md5sum filename > file_sum.md5
 $ md5sum -c file_sum.md5
 ```
 
- 如果需要用所有的.md5信息来检查所有的文件，可以使用： 
+如果需要用所有的.md5信息来检查所有的文件，可以使用：
 
 ```
 $ md5sum -c *.md5
+```
+
+#### 4. 对目录进行校验
+
+ 校验和是从文件中计算得来的。对目录计算校验和意味着我们需要对目录中的所有文件以递 归的方式进行计算。 这可以用命令md5deep或sha1deep来实现。首先，需要安装md5deep软件包以确保能找到 这些命令。该命令的用法如下：
+
+*  -r使用递归的方式
+*  -l使用相对路径。默认情况下，md5deep会输出文件的绝对路径
+
+```py
+ $ md5deep -rl directory_path > directory.md5 
+$ find directory_path -type f -print0 | xargs -0 md5sum >> directory.md5
+```
+
+或者也可以结合find来递归计算校验和：
+
+```
+$ find directory_path -type f -print0 | xargs -0 md5sum >> directory.md5
 ```
 
 ## Example
@@ -75,9 +91,7 @@ md5sum: WARNING: 1 computed checksum did NOT match
 
 它从给定的输入文件中生成一个长度 为40个字符的十六进制串。用来计算SAH-1串的命令是sha1sum。
 
-其用法和md5sum的非常相似。 只需要把先前讲过的那些命令中的md5sum替换成sha1sum就行了，记住将输入文件名从 file\_sum.md5改为file\_sum.sha1。 
-
-
+其用法和md5sum的非常相似。 只需要把先前讲过的那些命令中的md5sum替换成sha1sum就行了，记住将输入文件名从 file\_sum.md5改为file\_sum.sha1。
 
 校验和对于核实下载文件的完整性非常有帮助。我们从网上下载的ISO镜像文件一般更容易 出现错误（见图2-1）。为了检查接收文件正确与否，校验和得以广泛应用。校验和程序对同样的 文件数据始终生成一模一样的校验和。
 
