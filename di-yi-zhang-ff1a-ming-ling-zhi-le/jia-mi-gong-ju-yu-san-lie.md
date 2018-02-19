@@ -34,21 +34,35 @@ $ gpg -c filename
 $ gpg filename.gpg
 ```
 
- Base64是一组相似的编码方案，它将ASCII字符转换成以64为基数的形式（radix-64 representation），以可读的ASCII字符串来描述二进制数据。base64命令可以用来编码/解 码Base64字符串。要将文件编码为Base64格式，可以使用：
+Base64是一组相似的编码方案，它将ASCII字符转换成以64为基数的形式（radix-64 representation），以可读的ASCII字符串来描述二进制数据。base64命令可以用来编码/解 码Base64字符串。要将文件编码为Base64格式，可以使用：
 
 ```py
 $ base64 filename > outputfile
 # 或者
-$ cat file | base64 > outputfile 
+$ cat file | base64 > outputfile
 ```
 
- 解码Base64数据：
+解码Base64数据：
 
 ```py
 $ base64 -d file > outputfile
 # 或者
-$ cat base64_file | base64 -d > outputfile 
+$ cat base64_file | base64 -d > outputfile
 ```
+
+####  3.md5sum与sha1sum都是单向散列算法，均无法逆推出原始数据。它们通常用于验证数据 完整性或为特定数据生成唯一的密钥：
+
+```
+$ md5sum file
+8503063d5488c3080d4800ff50850dc9 file
+
+$ sha1sum file
+1ba02b66e2e557fede8f61b7df282cd0a27b816b file 
+```
+
+> ### 这种类型的散列算法是存储密码的理想方案。
+>
+> 密码使用其对应的散列值来存储。如果某 个用户需要进行认证，读取该用户提供的密码并转换成散列值，然后将其与之前存储的 散列值进行比对。如果相同，用户就通过认证，被允许访问；否则，就会被拒绝访问。 将密码以明文形式存储是件非常冒险的事，会面临安全风险。
 
 
 
