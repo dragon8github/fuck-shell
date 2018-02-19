@@ -40,14 +40,13 @@ $ md5sum -c *.md5
 
 #### 4. 对目录进行校验
 
- 校验和是从文件中计算得来的。对目录计算校验和意味着我们需要对目录中的所有文件以递 归的方式进行计算。 这可以用命令md5deep或sha1deep来实现。首先，需要安装md5deep软件包以确保能找到 这些命令。该命令的用法如下：
+校验和是从文件中计算得来的。对目录计算校验和意味着我们需要对目录中的所有文件以递 归的方式进行计算。 这可以用命令md5deep或sha1deep来实现。首先，需要安装md5deep软件包以确保能找到 这些命令。该命令的用法如下：
 
-*  -r使用递归的方式
-*  -l使用相对路径。默认情况下，md5deep会输出文件的绝对路径
+* -r使用递归的方式
+* -l使用相对路径。默认情况下，md5deep会输出文件的绝对路径
 
 ```py
- $ md5deep -rl directory_path > directory.md5 
-$ find directory_path -type f -print0 | xargs -0 md5sum >> directory.md5
+$ md5deep -r -l directory_path > directory.md5 
 ```
 
 或者也可以结合find来递归计算校验和：
