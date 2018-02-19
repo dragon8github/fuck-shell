@@ -36,11 +36,17 @@ split_file0000 split_file0003 split_file0006 split_file0009
 split_file0001 split_file0004 split_file0007
 ```
 
-##### 3. 如果不想按照数据块大小，而是需要根据行数来分割文件的话，可以使用 -l no\_of\_lines： 
+##### 3. 如果不想按照数据块大小，而是需要根据行数来分割文件的话，可以使用 -l no\_of\_lines：
 
 ```
 $ split -l 10 data.file # 分割成多个文件，每个文件包含10行
 ```
+
+###  csplit
+
+ 另一个有趣的的工具是csplit。它能够依据指定的条件和字符串匹配选项对日志文件进行 分割。
+
+ csplit是split工具的一个变体。split只能够根据数据大小或行数分割文件，而csplit 可以根据文本自身的特点进行分割。是否存在某个单词或文本内容都可作为分割文件的条件。
 
 
 
