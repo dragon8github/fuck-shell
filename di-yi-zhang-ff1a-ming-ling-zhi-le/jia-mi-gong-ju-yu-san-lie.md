@@ -50,19 +50,27 @@ $ base64 -d file > outputfile
 $ cat base64_file | base64 -d > outputfile
 ```
 
-####  3.md5sum与sha1sum都是单向散列算法，均无法逆推出原始数据。它们通常用于验证数据 完整性或为特定数据生成唯一的密钥：
+#### 3.md5sum与sha1sum都是单向散列算法，均无法逆推出原始数据。它们通常用于验证数据 完整性或为特定数据生成唯一的密钥：
 
 ```
 $ md5sum file
 8503063d5488c3080d4800ff50850dc9 file
 
 $ sha1sum file
-1ba02b66e2e557fede8f61b7df282cd0a27b816b file 
+1ba02b66e2e557fede8f61b7df282cd0a27b816b file
 ```
 
 > ### 这种类型的散列算法是存储密码的理想方案。
 >
 > 密码使用其对应的散列值来存储。如果某 个用户需要进行认证，读取该用户提供的密码并转换成散列值，然后将其与之前存储的 散列值进行比对。如果相同，用户就通过认证，被允许访问；否则，就会被拒绝访问。 将密码以明文形式存储是件非常冒险的事，会面临安全风险。
 
+####  4.shadow-like散列（salt散列）
 
+ 在Linux中，用户密码是以散列值形式存 储在文件 /etc/shadow中的。该文件中的典型内容类似于下面这样： 
+
+```
+test:$6$fG4eWdUi$ohTKOlEUzNk77.4S8MrYe07NTRV4M3LrJnZP9p.qc1bR5c.EcOruzPXfEu1uloB FUa18ENRH7F70zhodas3cR.:14790:0:99999:7:::
+```
+
+ 其中 `test: `后面所有的密文就是密码对应的shadow散列值。
 
