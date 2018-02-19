@@ -42,11 +42,50 @@ split_file0001 split_file0004 split_file0007
 $ split -l 10 data.file # 分割成多个文件，每个文件包含10行
 ```
 
-###  csplit
+### csplit
 
- 另一个有趣的的工具是csplit。它能够依据指定的条件和字符串匹配选项对日志文件进行 分割。
+另一个有趣的的工具是csplit。它能够依据指定的条件和字符串匹配选项对日志文件进行 分割。
 
- csplit是split工具的一个变体。split只能够根据数据大小或行数分割文件，而csplit 可以根据文本自身的特点进行分割。是否存在某个单词或文本内容都可作为分割文件的条件。
+csplit是split工具的一个变体。split只能够根据数据大小或行数分割文件，而csplit 可以根据文本自身的特点进行分割。是否存在某个单词或文本内容都可作为分割文件的条件。
+
+ 看一个日志文件示例：
+
+```py
+$ cat server.log
+SERVER-1
+[connection] 192.168.0.1 success
+[connection] 192.168.0.2 failed
+[disconnect] 192.168.0.3 pending
+[connection] 192.168.0.4 success
+SERVER-2
+[connection] 192.168.0.1 failed
+[connection] 192.168.0.2 failed
+[disconnect] 192.168.0.3 success
+[connection] 192.168.0.4 failed
+SERVER-3
+[connection] 192.168.0.1 pending
+[connection] 192.168.0.2 pending
+[disconnect] 192.168.0.3 pending
+[connection] 192.168.0.4 failed 
+```
+
+ 我们需要将这个日志文件分割成server1.log、server2.log和server3.log，这些文件的内容分别 取自原文件中不同的SERVER部分。那么，可以使用下面的方法来实现：
+
+```
+$ csplit server.log /SERVER/ -n 2 -s {*} -f server -b "%02d.log" ; rm server00.log
+$ ls
+server01.log server02.log server03.log server.log 
+```
+
+ 有关这个命令的详细说明如下：
+
+* /SERVER/ 用来匹配某一行，分割过程即从此处开始。
+* /\[REGEX\]/ 表示文本样式。包括从当前行（第一行）直到（但不包括）包含“SERVER” 的匹配行。
+* {\*} 表示根据匹配重复执行分割，直到文件末尾为止。可以用{整数}的形式来指定分割执 行的次数。
+* -s 使命令进入静默模式，不打印其他信息。
+* -n 指定分割后的文件名后缀的数字个数，例如01、02、03等。
+* -f 指定分割后的文件名前缀（在上面的例子中，server就是前缀）。
+* -b 指定后缀格式。例如%02d.log，类似于C语言中printf的参数格式。在这里文件名= 前缀+后缀=server + %02d.log。
 
 
 
