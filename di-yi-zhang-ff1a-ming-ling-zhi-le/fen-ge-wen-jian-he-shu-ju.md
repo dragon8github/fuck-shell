@@ -72,7 +72,7 @@ SERVER-3
 我们需要将这个日志文件分割成server1.log、server2.log和server3.log，这些文件的内容分别 取自原文件中不同的SERVER部分。那么，可以使用下面的方法来实现：
 
 ```
-$ csplit server.log /SERVER/ -n 2 -s {*} -f server -b "%02d.log" ; 
+$ csplit server.log /SERVER/ -n 2 -s {*} -f server -b "%02d.log"
 $ rm -rf server00.log
 $ ls
 server01.log server02.log server03.log server.log
