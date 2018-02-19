@@ -23,17 +23,23 @@ data.file x0009 x0019 x0029 x0039 x0049 x0059 x0069 x0079
 ##### 2. 为分割后的文件指定文件名前缀
 
 ```
-$ split [COMMAND_ARGS] PREFIX 
+$ split [COMMAND_ARGS] PREFIX
 ```
 
- 我们加上文件名前缀再运行先前那个命令来分割文件：
+我们加上文件名前缀再运行先前那个命令来分割文件：
 
 ```
 $ split -b 10k data.file -d -a 4 split_file
 $ ls
 data.file split_file0002 split_file0005 split_file0008 strtok.c
 split_file0000 split_file0003 split_file0006 split_file0009
-split_file0001 split_file0004 split_file0007 
+split_file0001 split_file0004 split_file0007
+```
+
+##### 3. 如果不想按照数据块大小，而是需要根据行数来分割文件的话，可以使用 -l no\_of\_lines： 
+
+```
+$ split -l 10 data.file # 分割成多个文件，每个文件包含10行
 ```
 
 
