@@ -59,7 +59,7 @@ fi
 
 ## uniq
 
-uniq命令通过消除重复内容，从给定输入中（stdin或命令行参数文件）找出唯一的行。它也可以用来找出输入中出现的重复行。 
+uniq命令通过消除重复内容，从给定输入中（stdin或命令行参数文件）找出唯一的行。它也可以用来找出输入中出现的重复行。
 
 uniq只能作用于排过序的数据输入，因此，uniq要么使用管道，要么将排过序的文件作为输入，与sort命令结合使用。
 
@@ -87,6 +87,31 @@ $ sort unsorted.txt | uniq
 $ uniq -u sorted.txt
 bash
 foss
+
+# 或是
+$ sort unsorted.txt | uniq -u 
+```
+
+\(3\)  找出文件中重复的行：
+
+```
+$ sort unsorted.txt | uniq -d
+hack 
+```
+
+ \(4\) 用uniq命令生成包含0值字节终止符的输出： 
+
+```
+$ uniq -z file.txt
+
+a.txt
+b.txt
+```
+
+\(5\) 删除文件中所有指定的文件
+
+```
+$ uniq -z file.txt | xargs -0 rm 
 ```
 
 
