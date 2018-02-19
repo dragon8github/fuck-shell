@@ -48,7 +48,7 @@ $ split -l 10 data.file # 分割成多个文件，每个文件包含10行
 
 csplit是split工具的一个变体。split只能够根据数据大小或行数分割文件，而csplit 可以根据文本自身的特点进行分割。是否存在某个单词或文本内容都可作为分割文件的条件。
 
- 看一个日志文件示例：
+看一个日志文件示例：
 
 ```py
 $ cat server.log
@@ -66,18 +66,18 @@ SERVER-3
 [connection] 192.168.0.1 pending
 [connection] 192.168.0.2 pending
 [disconnect] 192.168.0.3 pending
-[connection] 192.168.0.4 failed 
+[connection] 192.168.0.4 failed
 ```
 
- 我们需要将这个日志文件分割成server1.log、server2.log和server3.log，这些文件的内容分别 取自原文件中不同的SERVER部分。那么，可以使用下面的方法来实现：
+我们需要将这个日志文件分割成server1.log、server2.log和server3.log，这些文件的内容分别 取自原文件中不同的SERVER部分。那么，可以使用下面的方法来实现：
 
 ```
 $ csplit server.log /SERVER/ -n 2 -s {*} -f server -b "%02d.log" ; rm server00.log
 $ ls
-server01.log server02.log server03.log server.log 
+server01.log server02.log server03.log server.log
 ```
 
- 有关这个命令的详细说明如下：
+有关这个命令的详细说明如下：
 
 * /SERVER/ 用来匹配某一行，分割过程即从此处开始。
 * /\[REGEX\]/ 表示文本样式。包括从当前行（第一行）直到（但不包括）包含“SERVER” 的匹配行。
@@ -87,5 +87,5 @@ server01.log server02.log server03.log server.log
 * -f 指定分割后的文件名前缀（在上面的例子中，server就是前缀）。
 * -b 指定后缀格式。例如%02d.log，类似于C语言中printf的参数格式。在这里文件名= 前缀+后缀=server + %02d.log。
 
-
+ 因为分割后的第一个文件没有任何内容（匹配的单词就位于文件的第一行中），所以我们删 除了server00.log。
 
