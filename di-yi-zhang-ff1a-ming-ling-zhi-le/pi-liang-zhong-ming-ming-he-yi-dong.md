@@ -4,8 +4,6 @@
 
 另一件经常要做的工作是，将文件名中包含某个特定部分（例如相同的前缀）或者具有特定 类型的所有文件移动到指定的文件夹中。让我们看看如何用脚本来执行这些操作。
 
-
-
 #### 1. 用特定的格式重命名当前目录下的图像文件，最简单的方法是使用下面的脚本：
 
 ```py
@@ -13,13 +11,13 @@
 #文件名: rename.sh
 #用途: 重命名 .jpg 和 .png 文件
 count=1;
-for img in `find .  -maxdepth 1  -type f -iname '*.png' -o -iname '*.jpg'`
+for img in `find . -maxdepth 1  -type f -iname '*.png' -o -iname '*.jpg'`
 do
  new=image-$count.${img##*.}
  echo "Renaming $img to $new"
  mv "$img" "$new"
  let count++
-done 
+done
 ```
 
 
