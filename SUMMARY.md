@@ -29,6 +29,7 @@
 * [排序、唯一与重复](di-yi-zhang-ff1a-ming-ling-zhi-le/pai-xu-3001-wei-yi-yu-zhong-fu.md)
 * [临时文件命名与随机数](di-yi-zhang-ff1a-ming-ling-zhi-le/lin-shi-wen-jian-ming-ming-yu-sui-ji-shu.md)
 * [分割文件和数据](di-yi-zhang-ff1a-ming-ling-zhi-le/fen-ge-wen-jian-he-shu-ju.md)
+* [根据扩展名切分文件名](di-yi-zhang-ff1a-ming-ling-zhi-le/gen-ju-kuo-zhan-ming-qie-fen-wen-jian-ming.md)
 
 ## 番外章
 
