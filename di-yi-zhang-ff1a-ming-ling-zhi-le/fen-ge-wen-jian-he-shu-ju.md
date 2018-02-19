@@ -72,7 +72,7 @@ SERVER-3
 我们需要将这个日志文件分割成server1.log、server2.log和server3.log，这些文件的内容分别 取自原文件中不同的SERVER部分。那么，可以使用下面的方法来实现：
 
 ```
-$ csplit server.log /SERVER/ -n 2 -s {*} -f server -b "%02d.log" ; rm server00.log
+$ csplit server.log /SERVER/ -n 2 -s {*} -f server -b "%02d.log" ; rm -rf server00.log
 $ ls
 server01.log server02.log server03.log server.log
 ```
@@ -87,5 +87,7 @@ server01.log server02.log server03.log server.log
 * -f 指定分割后的文件名前缀（在上面的例子中，server就是前缀）。
 * -b 指定后缀格式。例如%02d.log，类似于C语言中printf的参数格式。在这里文件名= 前缀+后缀=server + %02d.log。
 
- 因为分割后的第一个文件没有任何内容（匹配的单词就位于文件的第一行中），所以我们删 除了server00.log。
+  因为分割后的第一个文件没有任何内容（匹配的单词就位于文件的第一行中），所以我们删 除了server00.log。
+
+
 
