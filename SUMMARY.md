@@ -32,6 +32,7 @@
 * [根据扩展名切分文件名](di-yi-zhang-ff1a-ming-ling-zhi-le/gen-ju-kuo-zhan-ming-qie-fen-wen-jian-ming.md)
 * [批量重命名和移动](di-yi-zhang-ff1a-ming-ling-zhi-le/pi-liang-zhong-ming-ming-he-yi-dong.md)
 * [交互输入自动化测试](di-yi-zhang-ff1a-ming-ling-zhi-le/jiao-hu-shu-ru-zi-dong-hua.md)
+* [利用并行进程加速命令执行](di-yi-zhang-ff1a-ming-ling-zhi-le/li-yong-bing-xing-jin-cheng-jia-su-ming-ling-zhi-xing.md)
 
 ## 番外章
 
