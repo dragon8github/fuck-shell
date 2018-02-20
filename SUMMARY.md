@@ -34,6 +34,10 @@
 * [交互输入自动化测试](di-yi-zhang-ff1a-ming-ling-zhi-le/jiao-hu-shu-ru-zi-dong-hua.md)
 * [利用并行进程加速命令执行](di-yi-zhang-ff1a-ming-ling-zhi-le/li-yong-bing-xing-jin-cheng-jia-su-ming-ling-zhi-xing.md)
 
+## 以文件之名
+
+* [生成任意大小的文件](yi-wen-jian-zhi-ming/sheng-cheng-ren-yi-da-xiao-de-wen-jian.md)
+
 ## 番外章
 
 * [无奈跳过的章节](wu-nai-tiao-guo-de-zhang-jie.md)
