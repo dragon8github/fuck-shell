@@ -28,19 +28,19 @@ Enter last-name:mp
 Hello world lee mp
 ```
 
-###  用echo -e来生成输入序列
+### 用echo -e来生成输入序列
 
 ```
 $ echo -e "1\nhello\n" > input.data
 $ cat input.data
 1
-hello 
+hello
 ```
 
- 从文件中导入交互式输入数据：
+然后我们就可以从文件中导入交互式输入数据：
 
 ```
-$ ./interactive.sh < input.data 
+$ ./interactive.sh < input.data
 ```
 
 
