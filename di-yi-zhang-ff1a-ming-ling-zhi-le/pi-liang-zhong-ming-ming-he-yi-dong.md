@@ -20,5 +20,7 @@ do
 done
 ```
 
+该脚本将当前目录下所有的.jpg和.png文件重命名，新文件名的格式为image-1.jpg、 image-2.jpg、image-3.jpg、image-4.png等，依次类推。
+
 
 
