@@ -31,7 +31,7 @@
 * [分割文件和数据](di-yi-zhang-ff1a-ming-ling-zhi-le/fen-ge-wen-jian-he-shu-ju.md)
 * [根据扩展名切分文件名](di-yi-zhang-ff1a-ming-ling-zhi-le/gen-ju-kuo-zhan-ming-qie-fen-wen-jian-ming.md)
 * [批量重命名和移动](di-yi-zhang-ff1a-ming-ling-zhi-le/pi-liang-zhong-ming-ming-he-yi-dong.md)
-* [交互输入自动化](di-yi-zhang-ff1a-ming-ling-zhi-le/jiao-hu-shu-ru-zi-dong-hua.md)
+* [交互输入自动化测试](di-yi-zhang-ff1a-ming-ling-zhi-le/jiao-hu-shu-ru-zi-dong-hua.md)
 
 ## 番外章
 
