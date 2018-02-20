@@ -37,7 +37,7 @@ $ cat input.data
 hello
 ```
 
-然后我们就可以从文件中导入交互式输入数据：
+然后我们就可以从文件中导入交互式输入数据，是不是很棒棒：
 
 ```
 $ ./interactive.sh < input.data
