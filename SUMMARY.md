@@ -37,6 +37,7 @@
 ## 以文件之名
 
 * [生成任意大小的文件](yi-wen-jian-zhi-ming/sheng-cheng-ren-yi-da-xiao-de-wen-jian.md)
+* [文本文件的交集与差集](yi-wen-jian-zhi-ming/wen-ben-wen-jian-de-jiao-ji-yu-cha-ji.md)
 
 ## 番外章
 
