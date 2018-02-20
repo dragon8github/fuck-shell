@@ -45,13 +45,13 @@ $ ./interactive.sh < input.data
 
 是不是很棒棒~~！
 
-###  用expect实现交互自动化测试
+### 用expect实现交互自动化测试
 
- 在默认情况下，多数常见的Linux发行版中并不包含expect。你得用软件包管理器手动进行 安装。
+在默认情况下，多数常见的Linux发行版中并不包含expect。你得用软件包管理器手动进行 安装。
 
 > yum install -y expect
 
- expect等待特定的输入提示，通过检查输入提示来发送数据。
+expect等待特定的输入提示，通过检查输入提示来发送数据。
 
 ```py
 #!/usr/bin/expect
@@ -61,7 +61,21 @@ expect "Enter first-name:"
 send "lee\n"
 expect "Enter last-name:"
 send "mp\n"
-expect eof 
+expect eof
+```
+
+* spawn参数指定需要自动化哪一个命令；
+* expect参数提供需要等待的消息；
+* send是要发送的消息；
+* expect eof指明命令交互结束。
+
+ 运行结果如下： $ ./automate\_expect.sh
+
+```
+spawn ./interactive.sh
+Enter first-name:lee
+Enter last-name:mp
+Hello world lee mp
 ```
 
 
